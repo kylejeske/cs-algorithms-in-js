@@ -1,11 +1,3 @@
-# CS Algorithms Deployed in JavaScript
-
-## Full Documentation
-[]()
-
----
-
-## Example
 <a name="module_cs/kadanes-maxsum-subarray"></a>
 
 ## cs/kadanes-maxsum-subarray
@@ -31,6 +23,4 @@ Maximum Sum within a contiguous sub-array, Kadane's Algorithm
 | [arr] | <code>Array.&lt;integer&gt;</code> | <code>[]</code> | The array against which we are finding a sum. |
 | [size] | <code>integer</code> | <code>arr.length</code> | The size of the array [maxSubArraySum#arr](maxSubArraySum#arr) |
 
----
-
-##### Generated with JSDoc
+Done in 0.27s.

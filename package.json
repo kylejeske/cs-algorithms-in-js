@@ -10,7 +10,8 @@
   "type": "module",
   "dependencies": {
     "docdash": "^1.1.1",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "jsdoc-to-markdown": "^5.0.1"
   },
   "scripts": {
     "bundle": "yarn generate-docs",
