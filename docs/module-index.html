@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>kadanes-maxsum-subarray - JS Algorithm Modules</title>
+    <title>index - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -41,12 +41,12 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="index.module_js.html">index.js</a><ul class='methods'><li data-type='method' style='display: none;'><a href="index.module_js.html#~driver">driver</a></li></ul></li><li><a href="module-kadanes-maxsum-subarray.html">kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="module-index.html">index</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-index.html#~driver">driver</a></li></ul></li><li><a href="module-kadanes-maxsum-subarray.html">kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
     
-    <h1 class="page-title">kadanes-maxsum-subarray</h1>
+    <h1 class="page-title">index</h1>
     
 
     
@@ -69,7 +69,7 @@
         <div class="container-overview">
         
             
-                <div class="description"><p>Kadane's Algorithm for finding the maximum sum of a sub-array.</p></div>
+                <div class="description"><p>Entrypoint into the logic.</p></div>
             
 
             
@@ -83,7 +83,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="kadanes-maxsum-subarray.js.html">kadanes-maxsum-subarray.js</a>, <a href="kadanes-maxsum-subarray.js.html#line2">line 2</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -130,30 +130,44 @@
 
 
 
-    <h5>Example</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Nothing is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
     
-    <pre class="prettyprint"><code>import { maxSubArraySum } from './kadanes-maxsum-subarray.js';
-
-let arr = [-2, -3, 4, -1, -2, 1, 5, -3];
-let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -164,6 +178,12 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
     
 
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li><a href="module-kadanes-maxsum-subarray.html">module:kadanes-maxsum-subarray</a></li>
+        </ul>
     
 
     
@@ -184,7 +204,7 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
     
 
-    <h4 class="name" id="~maxSubArraySum"><span class="type-signature">(inner) </span>maxSubArraySum<span class="signature">(arr<span class="signature-attributes">opt</span>, size<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {integer}</span></h4>
+    <h4 class="name" id="~driver"><span class="type-signature">(inner) </span>driver<span class="signature">(void)</span><span class="type-signature"> &rarr; {void|void}</span></h4>
 
     
 
@@ -196,7 +216,7 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="kadanes-maxsum-subarray.js.html">kadanes-maxsum-subarray.js</a>, <a href="kadanes-maxsum-subarray.js.html#line16">line 16</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -236,7 +256,7 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
 
 <div class="description">
-    <p>Maximum Sum within a contiguous sub-array, Kadane's Algorithm</p>
+    <p>Main logical driver</p>
 </div>
 
 
@@ -245,6 +265,11 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>driver();</code></pre>
 
 
 
@@ -262,11 +287,7 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -278,78 +299,23 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
         <tr>
             
-                <td class="name"><code>arr</code></td>
+                <td class="name"><code>void</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;integer></span>
+<span class="param-type">void</span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    <code>[]</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>The array against which we are finding a sum.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>size</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">integer</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    <code>arr.length</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>The size of the array maxSubArraySum#arr</p></td>
+            <td class="description last"><p>No parameters are accepted by this function.</p></td>
         </tr>
 
     
@@ -372,10 +338,10 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
 
 
 <h5>Returns:</h5>
-
-        
+<ul>
+        <li>
 <div class="param-desc">
-    <p>max_so_far</p>
+    <p>Nothing is returned from this function.</p>
 </div>
 
 
@@ -386,13 +352,29 @@ let sum = maxSubArraySum(arr); // Result: sum = 7;</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">integer</span>
+<span class="param-type">void</span>
 
 
     </dd>
 </dl>
-
+</li>
     
+        <li>
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+</li>
+    </ul>
 
 
 

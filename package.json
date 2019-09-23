@@ -1,5 +1,6 @@
 {
-  "name": "js-algo-max-sum-sub-array",
+  "name": "cs-algorithms-in-js",
+  "repository": "https://github.com/kylejeske/cs-algorithms-in-js",
   "version": "0.0.1",
   "description": "JS Implementation of Max Sum of Sub-Array (Kadane's Algorithm)",
   "main": "index.js",

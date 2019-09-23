@@ -1,12 +1,24 @@
 import { maxSubArraySum } from './kadanes-maxsum-subarray.js';
 
 /**
+ * Entrypoint into the logic of the modules.
+ * @fileOverview Serves as an entrypoint into the modules logic.
+ * @see module:my/entrypoint
+ */
+
+/**
+ * @module my/entrypoint
+ * @requires cs/kadanes-maxsum-subarray
+ * @exports {void} Nothing is exported.
+ * @returns {void} Nothing is returned.
+ */
+
+/**
  * Main logical driver
- * @fileOverview Contains the 'switch board' of operations within this tool.
- * @type lambda-function
  * @function driver
  * @param void {void} No parameters are accepted by this function.
  * @returns {void} Nothing is returned from this function.
+ * @type void
  * @example
  * driver();
  */

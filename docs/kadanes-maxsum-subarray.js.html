@@ -12,11 +12,11 @@
     
     
     
-    <meta property="og:title" content="Docdash"/>
+    <meta property="og:title" content="JS Algorithms - Usage & Documentation"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="https://cloud.githubusercontent.com/assets/447956/13398144/4dde7f36-defd-11e5-8909-1a9013302cb9.png"/>
-    <meta property="og:site_name" content="Docdash"/>
-    <meta property="og:url" content="http://clenemt.github.io/docdash/"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content="JS Algorithms"/>
+    <meta property="og:url" content="http://kylejeske.github.io/cs-algorithms-in-js/"/>
     
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/js-algorithms" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="module-kadanes-maxsum-subarray.html">kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#driver">driver</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="module-cs_kadanes-maxsum-subarray.html">cs/kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li><li><a href="module-my_entrypoint.html">my/entrypoint</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-my_entrypoint.html#~driver">driver</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -67,22 +67,20 @@
  * let sum = maxSubArraySum(arr); // Result: sum = 7;
  *
  *
- * @module kadanes-maxsum-subarray
+ * @module cs/kadanes-maxsum-subarray
  * @exports maxSubArraySum
  */
 
  /**
-  * @function maxSubArraySum
-  * @returns {integer} max_so_far
+  * Maximum Sum within a contiguous sub-array, Kadane's Algorithm
+  * @function
   * @param {integer[]} [arr = []] - The array against which we are finding a sum.
   * @param {integer} [size = arr.length] - The size of the array {@link maxSubArraySum#arr}
+  * @returns {integer} max_so_far
   */
 function maxSubArraySum(arr = [], size = arr.length) {
-    /** @const {number} **/
     let max_so_far        = Number.MIN_SAFE_INTEGER - 1;
-    /** @const {number} **/
     let max_endding_here  = 0;
-    /** @const {number} **/
     let position          = 0;
     while (position &lt; size) {
         max_endding_here  = max_endding_here + arr[position];

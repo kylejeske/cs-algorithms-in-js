@@ -9,22 +9,20 @@
  * let sum = maxSubArraySum(arr); // Result: sum = 7;
  *
  *
- * @module kadanes-maxsum-subarray
+ * @module cs/kadanes-maxsum-subarray
  * @exports maxSubArraySum
  */
 
  /**
-  * @function maxSubArraySum
-  * @returns {integer} max_so_far
+  * Maximum Sum within a contiguous sub-array, Kadane's Algorithm
+  * @function
   * @param {integer[]} [arr = []] - The array against which we are finding a sum.
   * @param {integer} [size = arr.length] - The size of the array {@link maxSubArraySum#arr}
+  * @returns {integer} max_so_far
   */
 function maxSubArraySum(arr = [], size = arr.length) {
-    /** @const {number} **/
     let max_so_far        = Number.MIN_SAFE_INTEGER - 1;
-    /** @const {number} **/
     let max_endding_here  = 0;
-    /** @const {number} **/
     let position          = 0;
     while (position < size) {
         max_endding_here  = max_endding_here + arr[position];
