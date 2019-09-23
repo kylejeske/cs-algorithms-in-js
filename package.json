@@ -10,6 +10,7 @@
   "type": "module",
   "dependencies": {
     "docdash": "^1.1.1",
+    "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
     "jsdoc-to-markdown": "^5.0.1"
   },
@@ -18,7 +19,54 @@
     "docs:gen-modules": "node_modules/.bin/jsdoc2md --template ./src/template.hbs --files ./src/modules/*.js > ./src/modules.md",
     "docs:gen-module-json": "node_modules/.bin/jsdoc2md --files ./src/modules/*.js --template ./src/template.hbs --json > ./src/.modules-jsdoc.json",
     "docs:generate": "yarn docs:generate-website && yarn docs:gen-modules",
-    "test": "echo \"No tests configured.\"; exit 1;",
+    "dev": "node --experimental-modules ./node_modules/.bin/jest --verbose ./__tests__/*.test.js --watch",
+    "test": "node --experimental-modules ./node_modules/.bin/jest ./__tests__/*.test.js  ",
+    "test:lastcommit": "node ./node_modules/.bin/jest --verbose ./__tests__/*.test.js -u ",
+    "test:coverage": "node ./node_modules/.bin/jest --verbose ./__tests__/*.test.js -u --collect-coverage --outputFile=./coverage/final-results.json --json",
     "start": "node --experimental-modules ./src/index.js"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(css|scss|less)$": "jest-css-modules"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/modules"
+    ],
+    "collectCoverageFrom": [
+      "./src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/docs/**",
+      "!**/__tests__/**"
+    ],
+    "coverageDirectory": "./coverage/",
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      },
+      "./src/modules/*.js": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest-css-modules": "^2.1.0"
   }
 }

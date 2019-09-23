@@ -1,0 +1,69 @@
+[
+  {
+    "id": "module:cs/kadanes-maxsum-subarray",
+    "longname": "module:cs/kadanes-maxsum-subarray",
+    "name": "cs/kadanes-maxsum-subarray",
+    "kind": "module",
+    "description": "Kadane's Algorithm for finding the maximum sum of a sub-array.",
+    "alias": "maxSubArraySum",
+    "meta": {
+      "lineno": 2,
+      "filename": "kadanes-maxsum-subarray.js",
+      "path": "/Users/kylejeske/development/js-algo-max-sum-sub-array/src/modules"
+    },
+    "preserveName": true,
+    "examples": [
+      "import { maxSubArraySum } from './kadanes-maxsum-subarray.js';\n\nlet arr = [-2, -3, 4, -1, -2, 1, 5, -3];\nlet sum = maxSubArraySum(arr); // Result: sum = 7;"
+    ],
+    "order": 0
+  },
+  {
+    "id": "module:cs/kadanes-maxsum-subarray~maxSubArraySum",
+    "longname": "module:cs/kadanes-maxsum-subarray~maxSubArraySum",
+    "name": "maxSubArraySum",
+    "kind": "function",
+    "scope": "inner",
+    "description": "Maximum Sum within a contiguous sub-array, Kadane's Algorithm",
+    "memberof": "module:cs/kadanes-maxsum-subarray",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Array.<integer>"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "[]",
+        "description": "The array against which we are finding a sum.",
+        "name": "arr"
+      },
+      {
+        "type": {
+          "names": [
+            "integer"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "arr.length",
+        "description": "The size of the array {@link maxSubArraySum#arr}",
+        "name": "size"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "integer"
+          ]
+        },
+        "description": "max_so_far"
+      }
+    ],
+    "meta": {
+      "lineno": 23,
+      "filename": "kadanes-maxsum-subarray.js",
+      "path": "/Users/kylejeske/development/js-algo-max-sum-sub-array/src/modules"
+    },
+    "order": 1
+  }
+]
