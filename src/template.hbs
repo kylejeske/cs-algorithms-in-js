@@ -1,0 +1,19 @@
+## Modules
+| Module Name | Description | Location |
+|---|---|---|
+{{#modules}}
+| <a name="{{{anchorName}}}">{{name}}</a> | {{description}} | [{{meta.filename}}:{{meta.lineno}}](./modules/{{meta.filename}}#L{{meta.lineno}}) |
+{{/modules}}
+
+## Functions
+| Name | Type | Description | Location | MemberOf | Scope |
+|---|---|---|---|---|---|
+{{#functions}}
+| <a name="{{{anchorName}}}">{{name}}</a> | {{kind}} | {{description}} | {{meta.filename}}:{{meta.lineno}} | {{memberof}} | {{scope}} |
+{{/functions}}
+
+---
+
+# API Documentation
+
+{{>main}}

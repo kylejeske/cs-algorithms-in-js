@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>index.js - JS Algorithm Modules</title>
+    <title>modules/kadanes-maxsum-subarray.js - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -46,7 +46,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">modules/kadanes-maxsum-subarray.js</h1>
     
 
     
@@ -56,39 +56,49 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { maxSubArraySum } from './modules/kadanes-maxsum-subarray.js';
-
+            <pre class="prettyprint source linenums"><code>
 /**
- * Entrypoint into the logic of the modules.
- * @fileOverview Serves as an entrypoint into the modules logic.
- * @see module:my/entrypoint
- */
-
-/**
- * @module my/entrypoint
- * @requires cs/kadanes-maxsum-subarray
- * @exports {void} Nothing is exported.
- * @returns {void} Nothing is returned.
- */
-
-/**
- * Main logical driver
- * @function driver
- * @param void {void} No parameters are accepted by this function.
- * @returns {void} Nothing is returned from this function.
- * @type void
+ * Find the maximum Sum of a Sub-Array.
+ * @fileOverview Kadane's Algorithm for finding the maximum sum of a sub-array.
  * @example
- * driver();
+ * import { maxSubArraySum } from './kadanes-maxsum-subarray.js';
+ *
+ * let arr = [-2, -3, 4, -1, -2, 1, 5, -3];
+ * let sum = maxSubArraySum(arr); // Result: sum = 7;
+ *
+ *
+ * @module cs/kadanes-maxsum-subarray
+ * @exports maxSubArraySum
  */
-const driver = () => {
-    let expectedResult = 7;
-    let arr = [-2, -3, 4, -1, -2, 1, 5, -3];
-    let actualResult = maxSubArraySum(arr);
-    console.assert(actualResult === expectedResult, `The maximum contiguous array sum should be '${expectedResult}'. The actual result was:`, actualResult);
-    console.log(`Executing maxSubArraySum(${arr.toString()}) -> Result: Max Sum = ${actualResult}`);
+
+ /**
+  * Maximum Sum within a contiguous sub-array, Kadane's Algorithm
+  * @function
+  * @param {integer[]} [arr = []] - The array against which we are finding a sum.
+  * @param {integer} [size = arr.length] - The size of the array {@link maxSubArraySum#arr}
+  * @returns {integer} max_so_far
+  */
+function maxSubArraySum(arr = [], size = arr.length) {
+    let max_so_far        = Number.MIN_SAFE_INTEGER - 1;
+    let max_endding_here  = 0;
+    let position          = 0;
+    while (position &lt; size) {
+        max_endding_here  = max_endding_here + arr[position];
+
+        (max_endding_here > max_so_far)
+        ? max_so_far = max_endding_here
+        : false;
+
+        (max_endding_here &lt; 0)
+        ? max_endding_here = 0
+        : false;
+
+        position++;
+    }
+    return max_so_far;
 }
 
-driver();
+export default maxSubArraySum;
 </code></pre>
         </article>
     </section>

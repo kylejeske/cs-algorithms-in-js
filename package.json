@@ -14,9 +14,10 @@
     "jsdoc-to-markdown": "^5.0.1"
   },
   "scripts": {
-    "generate-md": "node_modules/.bin/jsdoc2md",
-    "bundle": "yarn generate-docs",
-    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json",
+    "docs:generate-website": "node_modules/.bin/jsdoc -c jsdoc.json",
+    "docs:gen-modules": "node_modules/.bin/jsdoc2md --template ./src/template.hbs --files ./src/modules/*.js > ./src/modules.md",
+    "docs:gen-module-json": "node_modules/.bin/jsdoc2md --files ./src/modules/*.js --template ./src/template.hbs --json > ./src/.modules-jsdoc.json",
+    "docs:generate": "yarn docs:generate-website && yarn docs:gen-modules",
     "test": "echo \"No tests configured.\"; exit 1;",
     "start": "node --experimental-modules ./src/index.js"
   }
