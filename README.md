@@ -1,7 +1,7 @@
 # CS Algorithms Deployed in JavaScript
 
-## Full Documentation
-[]()
+### Documentation available at:
+[https://kylejeske.github.io/cs-algorithms-in-js/](https://kylejeske.github.io/cs-algorithms-in-js/)
 
 ---
 
