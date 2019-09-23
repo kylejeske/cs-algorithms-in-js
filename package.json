@@ -1,0 +1,20 @@
+{
+  "name": "js-algo-max-sum-sub-array",
+  "version": "0.0.1",
+  "description": "JS Implementation of Max Sum of Sub-Array (Kadane's Algorithm)",
+  "main": "index.js",
+  "author": "kyle <kylejeske@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "docdash": "^1.1.1",
+    "jsdoc": "^3.6.3"
+  },
+  "scripts": {
+    "bundle": "yarn generate-docs",
+    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json",
+    "test": "echo \"No tests configured.\"; exit 1;",
+    "start": "node --experimental-modules index.js"
+  }
+}
