@@ -43,7 +43,7 @@
         "allowUnknownTags": false
     },
     "source": {
-        "include": "./",
+        "include": "./src/",
         "includePattern": ".js$",
         "excludePattern": "(node_modules/|docs)"
     },

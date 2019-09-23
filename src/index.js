@@ -1,4 +1,4 @@
-import { maxSubArraySum } from './kadanes-maxsum-subarray.js';
+import { maxSubArraySum } from './modules/kadanes-maxsum-subarray.js';
 
 /**
  * Entrypoint into the logic of the modules.
