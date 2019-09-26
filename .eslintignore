@@ -1,0 +1,5 @@
+coverage/
+lib/
+reports/
+node_modules/
+docs/

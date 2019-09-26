@@ -1,20 +1,15 @@
-import { SinglyLinkedList, SinglyLinkedListNode, PrintSinglyLinkedList, wsLog } from "./singly-linked-list-utils";
+import { SinglyLinkedList, SinglyLinkedNode } from "./singly-linked-list-utils";
 
   /**
-  * SinglyLinkedList: Insert Node at Tail
+  * SinglyLinkedList - Insert Node at Tail
   * @fileOverview Takes data and breaks it into a SinglyLinkedList
-  * @module cs/singlylinkedlist-insert-at-tail
+  * @example
+  *
+  * @module cs/singly-linked-list-insert-at-tail
   * @requires cs/singly-linked-list-utils
+  * @exports SinglyListManipulatorFunction - SinglyLinkedList Generator Function.
+  * @exports InsertNodeAtTail - Function to insert a new node into the tail of a singly linked list.
   */
-
-  /**
-   * @function readLine
-   * @param {Array} [[inputString, currentLine]=args] Arguments
-   */
-  function readLine(...args) {
-      let [inputString, currentLine] = args;
-      return inputString[currentLine];
-  }
 
   /**
    * @function InsertNodeAtTail
@@ -22,13 +17,11 @@ import { SinglyLinkedList, SinglyLinkedListNode, PrintSinglyLinkedList, wsLog } 
    * @param {data=} - Node Data
    */
   const InsertNodeAtTail = (head, data) => {
-    let temp = new SinglyLinkedListNode(data);
-
+    let temp = new SinglyLinkedNode(data);
     // 1. if head == null, set head from temp; continue;
     // 2. if head.next == null, set head.next = temp; return;
     // 3. Recursively move on to the next position head.next;
     // 4. return head;
-
     if (head == null) {
       head = temp;
     } else if (head.next == null) {
@@ -40,29 +33,22 @@ import { SinglyLinkedList, SinglyLinkedListNode, PrintSinglyLinkedList, wsLog } 
     return head;
   };
 
- /**
-  * Takes the data and turns it into a SinglyLinkedList
-  * @function
-  * @param {integer} [llistCount=0] - List counter, against input data rows
-  */
-  function SinglyListManipulatorFunction([llistCount = 0, ...currentLine]) {
-    let llist = new SinglyLinkedList();
-    for (let i = 0; i < llistCount; i++) {
-      const llistItem   = parseInt(currentLine[i], 10);
-      const llist_head  = InsertNodeAtTail(llist.head, llistItem);
-      llist.head = llist_head;
-    }
-    PrintSinglyLinkedList(llist.head);
-    return llist;
+  /**
+   * Takes the data and turns it into a SinglyLinkedList
+   * @function SinglyListManipulatorFunction
+   * @param {integer} [llistCount=0] - List counter, against input data rows
+   */
+   function SinglyListManipulatorFunction([llistCount = 0, ...currentLine]) {
+     let llist = new SinglyLinkedList();
+     for (let i = 0; i < llistCount; i++) {
+       const llistItem   = parseInt(currentLine[i], 10);
+       const llist_head  = InsertNodeAtTail(llist.head, llistItem);
+       llist.head = llist_head;
+     }
+   return llist;
   }
 
-
-/**
- * @exports { SinglyListManipulatorFunction } SinglyListManipulatorFunction
- * @exports { InsertNodeAtTail } InsertNodeAtTail
- */
 export {
   SinglyListManipulatorFunction,
-  InsertNodeAtTail,
-  PrintSinglyLinkedList
+  InsertNodeAtTail
 };

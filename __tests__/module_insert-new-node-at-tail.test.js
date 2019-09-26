@@ -1,53 +1,58 @@
-import { SinglyListManipulatorFunction, InsertNodeAtTail, PrintSinglyLinkedList } from '../src/modules/singlylinkedlist-add-insert-to-tail';
+import {
+  Utils,
+  ParseIntoHumanFormat
+} from '../src/modules/singly-linked-list-utils';
 
-  const sizeOf = list => (list == null || Array.isArray(list) == false)
-                              ? void 0
-                              : list.length;
+import {
+  SinglyListManipulatorFunction,
+  InsertNodeAtTail
+} from '../src/modules/singlylinkedlist-add-insert-to-tail';
 
-  const first  = list => (list == null || list.length < 1)
-                              ? void 0
-                              : list[0];
+/**
+ * @series SinglyLinkedList
+ * @uses cs/singly-linked-list-utils
+ */
+describe("Module: cs/SinglyLinkedList-insert-at-tail", () => {
 
-  const last = list => (list == null || list.length < 1)
-                              ? void 0
-                              : list.slice(-1);
-  const all = list => (list == null)
-                              ? void 0
-                              : list;
+  // Domain-Local Global Vars.
+  var mockInput;
+  var expectedElements;
+  var mockSLL;
+  var ToHumanReadableList;
+  var name;
 
-  const parseIntoHumanFormat = function(node) {
-      let pretty = [];
-      while (node != null) {
-        pretty.push(node);
-        node = node.next;
-      };
-      return {
-        // size() -> number of nodes in list
-        size:   _ => sizeOf(pretty),
+  beforeAll(() => {
+    mockInput         = [5,141,302,164,530,474];
+    expectedElements  = (mockInput.length - 1);
+    mockSLL           = SinglyListManipulatorFunction(mockInput);
 
-        // first() -> first element
-        first:  _ => first(pretty),
+    ToHumanReadableList = async (mockSLL) => {
+      return await ParseIntoHumanFormat(mockSLL.head);
+    };
+  });
 
-        // last() -> last element
-        last:   _ => last(pretty),
+  name = "SinglyListManipulatorFunction";
+  it(`Should export Function: ${name}`, () => {
+    expect(Object.is(SinglyListManipulatorFunction, undefined)).toBeFalsy();
+  });
 
-        // flat() -> flattened into Array
-        flat:   _ => all(pretty)
-      };
-  };
+  /**
+   * @todo Correct this test
+   */
+  it('function SinglyListManipulatorFunction should return a Node class object', () => {
+    expect(Object.is(SinglyListManipulatorFunction,undefined)).toBeFalsy();
+  });
 
-  const toHumanReadableList = async (mockSLL) => {
-    return await parseIntoHumanFormat(mockSLL.head);
-  };
-
-  var mockInput = [5,141,302,164,530,474];
-  var mockSLL   = SinglyListManipulatorFunction(mockInput);
-
-  test('SinglyListManipulatorFunction(): should create a human readable list with a length of ' + (mockInput.length - 1), () => {
-    const mockReadable = toHumanReadableList(mockSLL);
+  /**
+   * @test ParseIntoHumanFormat
+   */
+  it('make it a human readable list, with ' + expectedElements + 'elements', () => {
+    const mockReadable = ToHumanReadableList(mockSLL);
     mockReadable
       .then(prettyList => {
         expect(prettyList.flat().length).toEqual((mockInput.length - 1));
       })
       .catch(function(...err){ console.warn('an error occured.'); console.table(err); return true; });
   });
+
+});
