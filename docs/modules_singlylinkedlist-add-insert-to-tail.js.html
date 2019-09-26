@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>index.js - JS Algorithm Modules</title>
+    <title>modules/singlylinkedlist-add-insert-to-tail.js - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -46,7 +46,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">modules/singlylinkedlist-add-insert-to-tail.js</h1>
     
 
     
@@ -56,39 +56,74 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { maxSubArraySum } from './modules/kadanes-maxsum-subarray.js';
+            <pre class="prettyprint source linenums"><code>import { SinglyLinkedList, SinglyLinkedListNode, PrintSinglyLinkedList, wsLog } from "./singly-linked-list-utils";
+
+  /**
+  * SinglyLinkedList: Insert Node at Tail
+  * @fileOverview Takes data and breaks it into a SinglyLinkedList
+  * @module cs/singlylinkedlist-insert-at-tail
+  * @requires cs/singly-linked-list-utils
+  */
+
+  /**
+   * @function readLine
+   * @param {Array} [[inputString, currentLine]=args] Arguments
+   */
+  function readLine(...args) {
+      let [inputString, currentLine] = args;
+      return inputString[currentLine];
+  }
+
+  /**
+   * @function InsertNodeAtTail
+   * @param {head=} - Node Head
+   * @param {data=} - Node Data
+   */
+  const InsertNodeAtTail = (head, data) => {
+    let temp = new SinglyLinkedListNode(data);
+
+    // 1. if head == null, set head from temp; continue;
+    // 2. if head.next == null, set head.next = temp; return;
+    // 3. Recursively move on to the next position head.next;
+    // 4. return head;
+
+    if (head == null) {
+      head = temp;
+    } else if (head.next == null) {
+      head.next = temp;
+      return head;
+    } else {
+      InsertNodeAtTail(head.next, data);
+    }
+    return head;
+  };
+
+ /**
+  * Takes the data and turns it into a SinglyLinkedList
+  * @function
+  * @param {integer} [llistCount=0] - List counter, against input data rows
+  */
+  function SinglyListManipulatorFunction([llistCount = 0, ...currentLine]) {
+    let llist = new SinglyLinkedList();
+    for (let i = 0; i &lt; llistCount; i++) {
+      const llistItem   = parseInt(currentLine[i], 10);
+      const llist_head  = InsertNodeAtTail(llist.head, llistItem);
+      llist.head = llist_head;
+    }
+    PrintSinglyLinkedList(llist.head);
+    return llist;
+  }
+
 
 /**
- * Entrypoint into the logic of the modules.
- * @fileOverview Serves as an entrypoint into the modules logic.
- * @see module:my/entrypoint
+ * @exports { SinglyListManipulatorFunction } SinglyListManipulatorFunction
+ * @exports { InsertNodeAtTail } InsertNodeAtTail
  */
-
-/**
- * @module my/entrypoint
- * @requires cs/kadanes-maxsum-subarray
- * @exports {void} Nothing is exported.
- * @returns {void} Nothing is returned.
- */
-
-/**
- * Main logical driver
- * @function driver
- * @param void {void} No parameters are accepted by this function.
- * @returns {void} Nothing is returned from this function.
- * @type void
- * @example
- * driver();
- */
-const driver = () => {
-    let expectedResult = 7;
-    let arr = [-2, -3, 4, -1, -2, 1, 5, -3];
-    let actualResult = maxSubArraySum(arr);
-    console.assert(actualResult === expectedResult, `The maximum contiguous array sum should be '${expectedResult}'. The actual result was:`, actualResult);
-    console.log(`Executing maxSubArraySum(${arr.toString()}) -> Result: Max Sum = ${actualResult}`);
-}
-
-driver();
+export {
+  SinglyListManipulatorFunction,
+  InsertNodeAtTail,
+  PrintSinglyLinkedList
+};
 </code></pre>
         </article>
     </section>
