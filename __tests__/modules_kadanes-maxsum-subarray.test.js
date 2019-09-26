@@ -1,4 +1,4 @@
-import kadanesMaxSumModule from 'kadanes-maxsum-subarray';
+import kadanesMaxSumModule from '../src/modules/kadanes-maxsum-subarray';
 
 describe('testing kadanes maxsum subarray module', () => {
 

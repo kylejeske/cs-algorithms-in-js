@@ -1,0 +1,5 @@
+{
+  "pageTitle": "Testing suite",
+  "outputPath": "./reports/index.html",
+  "includeFailureMsg": true
+}
