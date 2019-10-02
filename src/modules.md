@@ -1,6 +1,7 @@
 ## Modules
 | Module Name | Description | Location |
 |---|---|---|
+| <a name="module_cs/ArrayParition">cs/ArrayParition</a> | Compute Pair Sum of Ordered Pairs in List of Numbers | [array-partition-sum-of-pairs.js:1](./modules/array-partition-sum-of-pairs.js#L1) |
 | <a name="module_cs/kadanes-maxsum-subarray">cs/kadanes-maxsum-subarray</a> | Kadane&#x27;s Algorithm for finding the maximum sum of a sub-array. | [kadanes-maxsum-subarray.js:2](./modules/kadanes-maxsum-subarray.js#L2) |
 | <a name="module_cs/reverse-signed-int32">cs/reverse-signed-int32</a> | Reverse the digits in a Signed 32-bit Integer | [reverse-signed-int32.js:2](./modules/reverse-signed-int32.js#L2) |
 | <a name="module_cs/singly-linked-list-utils">cs/singly-linked-list-utils</a> | A Utility class for building and formatting within a LinkedList in JavaScript. | [singly-linked-list-utils.js:1](./modules/singly-linked-list-utils.js#L1) |
@@ -9,6 +10,8 @@
 ## Functions
 | Name | Type | Description | Location | MemberOf | Scope |
 |---|---|---|---|---|---|
+| <a name="module_cs/ArrayParition..arraySorting_LowestToHighest">arraySorting_LowestToHighest</a> | function | arraySorting_LowestToHighest - Used to get numbered array in lowest to highest | array-partition-sum-of-pairs.js:22 | module:cs/ArrayParition | inner |
+| <a name="module_cs/ArrayParition..arrayParititon_PairSumCompute">arrayParititon_PairSumCompute</a> | function | arrayParititon_PairSumCompute | array-partition-sum-of-pairs.js:30 | module:cs/ArrayParition | inner |
 | <a name="module_cs/kadanes-maxsum-subarray..maxSubArraySum">maxSubArraySum</a> | function | Maximum Sum within a contiguous sub-array, Kadane&#x27;s Algorithm | kadanes-maxsum-subarray.js:23 | module:cs/kadanes-maxsum-subarray | inner |
 | <a name="module_cs/reverse-signed-int32..reverseSignedInt32">reverseSignedInt32</a> | function | Reverse a Signed Integer 32 | reverse-signed-int32.js:31 | module:cs/reverse-signed-int32 | inner |
 | <a name="module_cs/singly-linked-list-utils..annonymous">annonymous</a> | function | parseIntoHumanFormat - loop over a list of linked nodes, and format it into an array | singly-linked-list-utils.js:112 | module:cs/singly-linked-list-utils | inner |
@@ -25,6 +28,9 @@
 ## Modules
 
 <dl>
+<dt><a href="#module_cs/ArrayParition">cs/ArrayParition</a></dt>
+<dd><p>Compute Pair Sum of Ordered Pairs in List of Numbers</p>
+</dd>
 <dt><a href="#module_cs/kadanes-maxsum-subarray">cs/kadanes-maxsum-subarray</a></dt>
 <dd><p>Kadane&#39;s Algorithm for finding the maximum sum of a sub-array.</p>
 </dd>
@@ -38,6 +44,63 @@
 <dd><p>Takes data and breaks it into a SinglyLinkedList</p>
 </dd>
 </dl>
+
+<a name="module_cs/ArrayParition"></a>
+
+## cs/ArrayParition
+Compute Pair Sum of Ordered Pairs in List of Numbers
+
+**Example**  
+```js
+import { arrayParititon_PairSumCompute } from "./arrayParititon_PairSumCompute";
+let listofNumbers = [1,4,2,3];
+arrayParititon_PairSumCompute(listofNumbers([1,4,2,3])) => [[1,2], [3,4]]
+ [1,2] -> Min. element within pair = 1
+ [3,4] -> Min. element within pair = 3
+  1 + 3 = 4
+Result: 4
+```
+
+* [cs/ArrayParition](#module_cs/ArrayParition)
+    * [~sum](#module_cs/ArrayParition..sum) : <code>integer</code>
+    * [~pairs](#module_cs/ArrayParition..pairs) : <code>array</code>
+    * [~arraySorting_LowestToHighest(a, b)](#module_cs/ArrayParition..arraySorting_LowestToHighest) ⇒ <code>numbers</code>
+    * [~arrayParititon_PairSumCompute([&#x3D;pairs])](#module_cs/ArrayParition..arrayParititon_PairSumCompute) ⇒ <code>integer</code>
+
+<a name="module_cs/ArrayParition..sum"></a>
+
+### cs/ArrayParition~sum : <code>integer</code>
+**Kind**: inner property of [<code>cs/ArrayParition</code>](#module_cs/ArrayParition)  
+<a name="module_cs/ArrayParition..pairs"></a>
+
+### cs/ArrayParition~pairs : <code>array</code>
+sorted array from least to greatest
+
+**Kind**: inner property of [<code>cs/ArrayParition</code>](#module_cs/ArrayParition)  
+<a name="module_cs/ArrayParition..arraySorting_LowestToHighest"></a>
+
+### cs/ArrayParition~arraySorting\_LowestToHighest(a, b) ⇒ <code>numbers</code>
+arraySorting_LowestToHighest - Used to get numbered array in lowest to highest
+
+**Kind**: inner method of [<code>cs/ArrayParition</code>](#module_cs/ArrayParition)  
+**Returns**: <code>numbers</code> - [-1|1]  
+
+| Param | Type |
+| --- | --- |
+| a | <code>number</code> | 
+| b | <code>number</code> | 
+
+<a name="module_cs/ArrayParition..arrayParititon_PairSumCompute"></a>
+
+### cs/ArrayParition~arrayParititon\_PairSumCompute([&#x3D;pairs]) ⇒ <code>integer</code>
+arrayParititon_PairSumCompute
+
+**Kind**: inner method of [<code>cs/ArrayParition</code>](#module_cs/ArrayParition)  
+**Returns**: <code>integer</code> - sum - Sum of pairs  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [=pairs] | <code>array</code> | List of Number Elements (stored in an Array) |
 
 <a name="module_cs/kadanes-maxsum-subarray"></a>
 
