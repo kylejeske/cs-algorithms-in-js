@@ -1,6 +1,6 @@
  /**
   * Compute Pair Sum of Ordered Pairs in List of Numbers
-  * @module cs/ArrayParition
+  * @module cs/array-partition
   * @Example
   * import { arrayParititon_PairSumCompute } from "./arrayParititon_PairSumCompute";
   * let listofNumbers = [1,4,2,3];
