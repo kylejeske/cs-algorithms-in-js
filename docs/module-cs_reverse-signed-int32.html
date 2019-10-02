@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>my/entrypoint - JS Algorithm Modules</title>
+    <title>cs/reverse-signed-int32 - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -46,7 +46,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">my/entrypoint</h1>
+    <h1 class="page-title">cs/reverse-signed-int32</h1>
     
 
     
@@ -59,6 +59,8 @@
 <header>
     
         
+            
+        
     
 </header>
 
@@ -67,6 +69,93 @@
         <div class="container-overview">
         
             
+                <div class="description"><p>Reverse the digits in a Signed 32-bit Integer</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_reverse-signed-int32.js.html">modules/reverse-signed-int32.js</a>, <a href="modules_reverse-signed-int32.js.html#line2">line 2</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { reverseSignedInt32 } from './reverse-signed-int32.js';
+
+let int = 123456;
+let res = reverseSignedInt32(int); // Result: res = 654321;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             
         
@@ -75,12 +164,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li><a href="module-cs_kadanes-maxsum-subarray.html">module:cs/kadanes-maxsum-subarray</a></li>
-        </ul>
     
 
     
@@ -92,6 +175,128 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~MAX_INT32"><span class="type-signature">(inner, constant) </span>MAX_INT32<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_reverse-signed-int32.js.html">modules/reverse-signed-int32.js</a>, <a href="modules_reverse-signed-int32.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~MIN_INT32"><span class="type-signature">(inner, constant) </span>MIN_INT32<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_reverse-signed-int32.js.html">modules/reverse-signed-int32.js</a>, <a href="modules_reverse-signed-int32.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -101,7 +306,7 @@
 
     
 
-    <h4 class="name" id="~driver"><span class="type-signature">(inner) </span>driver<span class="signature">(void)</span><span class="type-signature"> &rarr; {void|void}</span></h4>
+    <h4 class="name" id="~reverseSignedInt32"><span class="type-signature">(inner) </span>reverseSignedInt32<span class="signature">(int<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {integer|0}</span></h4>
 
     
 
@@ -113,7 +318,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
+        <a href="modules_reverse-signed-int32.js.html">modules/reverse-signed-int32.js</a>, <a href="modules_reverse-signed-int32.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -153,7 +358,7 @@
 
 
 <div class="description">
-    <p>Main logical driver</p>
+    <p>Reverse a Signed Integer 32</p>
 </div>
 
 
@@ -162,11 +367,6 @@
 
 
 
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>driver();</code></pre>
 
 
 
@@ -184,6 +384,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -196,23 +398,33 @@
 
         <tr>
             
-                <td class="name"><code>void</code></td>
+                <td class="name"><code>int</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">void</span>
+<span class="param-type">integer</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>No parameters are accepted by this function.</p></td>
+            <td class="description last"><p>Integer that we are reversing.</p></td>
         </tr>
 
     
@@ -235,10 +447,10 @@
 
 
 <h5>Returns:</h5>
-<ul>
-        <li>
+
+        
 <div class="param-desc">
-    <p>Nothing is returned from this function.</p>
+    <p>result</p>
 </div>
 
 
@@ -249,29 +461,16 @@
     </dt>
     <dd>
         
-<span class="param-type">void</span>
+<span class="param-type">integer</span>
+|
+
+<span class="param-type">0</span>
 
 
     </dd>
 </dl>
-</li>
+
     
-        <li>
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">void</span>
-
-
-    </dd>
-</dl>
-</li>
-    </ul>
 
 
 

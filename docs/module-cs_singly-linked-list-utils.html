@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="module-cs_kadanes-maxsum-subarray.html">cs/kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li><li><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a></li><li><a href="module-cs_singlylinkedlist-insert-at-tail.html">cs/singlylinkedlist-insert-at-tail</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~InsertNodeAtTail">InsertNodeAtTail</a></li><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~readLine">readLine</a></li><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~SinglyListManipulatorFunction">SinglyListManipulatorFunction</a></li></ul></li><li><a href="module-my_entrypoint.html">my/entrypoint</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-my_entrypoint.html#~driver">driver</a></li></ul></li><li><a href="module-%257B.html">{</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Classes</h3><ul><li><a href="module-cs_singly-linked-list-utils-SinglyLinkedList.html">cs/singly-linked-list-utils~SinglyLinkedList</a></li><li><a href="module-cs_singly-linked-list-utils-SinglyLinkedListClass.html">cs/singly-linked-list-utils~SinglyLinkedListClass</a></li><li></li></ul><h3>Modules</h3><ul><li><a href="module-cs_kadanes-maxsum-subarray.html">cs/kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li><li><a href="module-cs_reverse-signed-int32.html">cs/reverse-signed-int32</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_reverse-signed-int32.html#~reverseSignedInt32">reverseSignedInt32</a></li></ul></li><li><a href="module-cs_singly-linked-list-insert-at-tail.html">cs/singly-linked-list-insert-at-tail</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-insert-at-tail.html#~InsertNodeAtTail">InsertNodeAtTail</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-insert-at-tail.html#~SinglyListManipulatorFunction">SinglyListManipulatorFunction</a></li></ul></li><li><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~annonymous">annonymous</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~first">first</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~flat">flat</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~last">last</a></li></ul></li><li><a href="module-my_entrypoint.html">my/entrypoint</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-my_entrypoint.html#~driver">driver</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -69,7 +69,7 @@
         <div class="container-overview">
         
             
-                <div class="description"><p>Utility Class for Building Singly-Linked-Lists</p></div>
+                <div class="description"><p>A Utility class for building and formatting within a LinkedList in JavaScript.</p></div>
             
 
             
@@ -130,6 +130,14 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>import { SinglyLinkedList, SinglyLinkedNode, Utils, ParseIntoHumanFormat } from './singly-linked-list-utils';
+const toHumanReadableList = async (mockSLL) => {
+  return await ParseIntoHumanFormat(mockSLL.head);
+};</code></pre>
+
+
 
 
 
@@ -159,6 +167,19 @@
     
 
     
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-cs_singly-linked-list-utils-SinglyLinkedList.html">SinglyLinkedList</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-cs_singly-linked-list-utils-SinglyLinkedListClass.html">SinglyLinkedListClass</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-cs_singly-linked-list-utils-SinglyLinkedListClass.html">SinglyLinkedListClass</a></dt>
+            <dd></dd>
+        </dl>
+    
     
     
 
@@ -167,9 +188,1049 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~size"><span class="type-signature">(inner) </span>size<span class="type-signature"> :function</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line130">line 130</a>
+    </li></ul></dd>
+    
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>number of nodes in list</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">function</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~Utils"><span class="type-signature">(inner) </span>Utils<span class="type-signature"> :Object</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line68">line 68</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>sizeOf - Checks for existance, and isArray, then returns the length of array</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>sizeOf([1,2,3,4]) => 4</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="~Utils"><span class="type-signature">(inner) </span>Utils<span class="type-signature"> :Object</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>first</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~Utils"><span class="type-signature">(inner) </span>Utils<span class="type-signature"> :Object</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line89">line 89</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>last</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~Utils"><span class="type-signature">(inner) </span>Utils<span class="type-signature"> :Object</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line97">line 97</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>all</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~annonymous"><span class="type-signature">(inner) </span>annonymous<span class="signature">(Node)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line112">line 112</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>parseIntoHumanFormat - loop over a list of linked nodes, and format it into an array</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Node</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">node</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>ParseIntoHumanFormat</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~first"><span class="type-signature">(inner) </span>first<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>first element in list</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~flat"><span class="type-signature">(inner) </span>flat<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line144">line 144</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>produce an array indexed by position within the linked list</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>[SinglyLinkedNode]</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~last"><span class="type-signature">(inner) </span>last<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line138">line 138</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>last element in list</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="~SinglyLinkedNodeClass">SinglyLinkedNodeClass</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Data relative to this element</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>next</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>[=null] - Next element in linked list</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~Utils">Utils</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line105">line 105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Utils - Combined object of useful methods.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
     
 
     

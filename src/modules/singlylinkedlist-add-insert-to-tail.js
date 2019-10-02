@@ -3,8 +3,6 @@ import { SinglyLinkedList, SinglyLinkedNode } from "./singly-linked-list-utils";
   /**
   * SinglyLinkedList - Insert Node at Tail
   * @fileOverview Takes data and breaks it into a SinglyLinkedList
-  * @example
-  *
   * @module cs/singly-linked-list-insert-at-tail
   * @requires cs/singly-linked-list-utils
   * @exports SinglyListManipulatorFunction - SinglyLinkedList Generator Function.

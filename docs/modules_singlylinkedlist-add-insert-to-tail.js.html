@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Modules</h3><ul><li><a href="module-cs_kadanes-maxsum-subarray.html">cs/kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li><li><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a></li><li><a href="module-cs_singlylinkedlist-insert-at-tail.html">cs/singlylinkedlist-insert-at-tail</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~InsertNodeAtTail">InsertNodeAtTail</a></li><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~readLine">readLine</a></li><li data-type='method' style='display: none;'><a href="module-cs_singlylinkedlist-insert-at-tail.html#~SinglyListManipulatorFunction">SinglyListManipulatorFunction</a></li></ul></li><li><a href="module-my_entrypoint.html">my/entrypoint</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-my_entrypoint.html#~driver">driver</a></li></ul></li><li><a href="module-%257B.html">{</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/kylejeske/cs-algorithms-in-js" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Classes</h3><ul><li><a href="module-cs_singly-linked-list-utils-SinglyLinkedList.html">cs/singly-linked-list-utils~SinglyLinkedList</a></li><li><a href="module-cs_singly-linked-list-utils-SinglyLinkedListClass.html">cs/singly-linked-list-utils~SinglyLinkedListClass</a></li><li></li></ul><h3>Modules</h3><ul><li><a href="module-cs_kadanes-maxsum-subarray.html">cs/kadanes-maxsum-subarray</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_kadanes-maxsum-subarray.html#~maxSubArraySum">maxSubArraySum</a></li></ul></li><li><a href="module-cs_reverse-signed-int32.html">cs/reverse-signed-int32</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_reverse-signed-int32.html#~reverseSignedInt32">reverseSignedInt32</a></li></ul></li><li><a href="module-cs_singly-linked-list-insert-at-tail.html">cs/singly-linked-list-insert-at-tail</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-insert-at-tail.html#~InsertNodeAtTail">InsertNodeAtTail</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-insert-at-tail.html#~SinglyListManipulatorFunction">SinglyListManipulatorFunction</a></li></ul></li><li><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~annonymous">annonymous</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~first">first</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~flat">flat</a></li><li data-type='method' style='display: none;'><a href="module-cs_singly-linked-list-utils.html#~last">last</a></li></ul></li><li><a href="module-my_entrypoint.html">my/entrypoint</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-my_entrypoint.html#~driver">driver</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -56,23 +56,16 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { SinglyLinkedList, SinglyLinkedListNode, PrintSinglyLinkedList, wsLog } from "./singly-linked-list-utils";
+            <pre class="prettyprint source linenums"><code>import { SinglyLinkedList, SinglyLinkedNode } from "./singly-linked-list-utils";
 
   /**
-  * SinglyLinkedList: Insert Node at Tail
+  * SinglyLinkedList - Insert Node at Tail
   * @fileOverview Takes data and breaks it into a SinglyLinkedList
-  * @module cs/singlylinkedlist-insert-at-tail
+  * @module cs/singly-linked-list-insert-at-tail
   * @requires cs/singly-linked-list-utils
+  * @exports SinglyListManipulatorFunction - SinglyLinkedList Generator Function.
+  * @exports InsertNodeAtTail - Function to insert a new node into the tail of a singly linked list.
   */
-
-  /**
-   * @function readLine
-   * @param {Array} [[inputString, currentLine]=args] Arguments
-   */
-  function readLine(...args) {
-      let [inputString, currentLine] = args;
-      return inputString[currentLine];
-  }
 
   /**
    * @function InsertNodeAtTail
@@ -80,13 +73,11 @@
    * @param {data=} - Node Data
    */
   const InsertNodeAtTail = (head, data) => {
-    let temp = new SinglyLinkedListNode(data);
-
+    let temp = new SinglyLinkedNode(data);
     // 1. if head == null, set head from temp; continue;
     // 2. if head.next == null, set head.next = temp; return;
     // 3. Recursively move on to the next position head.next;
     // 4. return head;
-
     if (head == null) {
       head = temp;
     } else if (head.next == null) {
@@ -98,31 +89,24 @@
     return head;
   };
 
- /**
-  * Takes the data and turns it into a SinglyLinkedList
-  * @function
-  * @param {integer} [llistCount=0] - List counter, against input data rows
-  */
-  function SinglyListManipulatorFunction([llistCount = 0, ...currentLine]) {
-    let llist = new SinglyLinkedList();
-    for (let i = 0; i &lt; llistCount; i++) {
-      const llistItem   = parseInt(currentLine[i], 10);
-      const llist_head  = InsertNodeAtTail(llist.head, llistItem);
-      llist.head = llist_head;
-    }
-    PrintSinglyLinkedList(llist.head);
-    return llist;
+  /**
+   * Takes the data and turns it into a SinglyLinkedList
+   * @function SinglyListManipulatorFunction
+   * @param {integer} [llistCount=0] - List counter, against input data rows
+   */
+   function SinglyListManipulatorFunction([llistCount = 0, ...currentLine]) {
+     let llist = new SinglyLinkedList();
+     for (let i = 0; i &lt; llistCount; i++) {
+       const llistItem   = parseInt(currentLine[i], 10);
+       const llist_head  = InsertNodeAtTail(llist.head, llistItem);
+       llist.head = llist_head;
+     }
+   return llist;
   }
 
-
-/**
- * @exports { SinglyListManipulatorFunction } SinglyListManipulatorFunction
- * @exports { InsertNodeAtTail } InsertNodeAtTail
- */
 export {
   SinglyListManipulatorFunction,
-  InsertNodeAtTail,
-  PrintSinglyLinkedList
+  InsertNodeAtTail
 };
 </code></pre>
         </article>

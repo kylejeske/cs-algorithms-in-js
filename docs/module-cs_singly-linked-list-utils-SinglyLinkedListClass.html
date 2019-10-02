@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>my/entrypoint - JS Algorithm Modules</title>
+    <title>SinglyLinkedListClass - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -46,7 +46,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">my/entrypoint</h1>
+    <h1 class="page-title">SinglyLinkedListClass</h1>
     
 
     
@@ -58,6 +58,11 @@
 
 <header>
     
+        <h2>
+            <span class="ancestors"><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a>~</span>
+        
+        SinglyLinkedListClass
+        </h2>
         
     
 </header>
@@ -68,40 +73,9 @@
         
             
 
-            
-        
-        </div>
     
 
-    
-
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li><a href="module-cs_kadanes-maxsum-subarray.html">module:cs/kadanes-maxsum-subarray</a></li>
-        </ul>
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~driver"><span class="type-signature">(inner) </span>driver<span class="signature">(void)</span><span class="type-signature"> &rarr; {void|void}</span></h4>
+    <h4 class="name" id="SinglyLinkedListClass"><span class="type-signature"></span>new SinglyLinkedListClass<span class="signature">(mixed|void<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {void}</span></h4>
 
     
 
@@ -113,7 +87,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -153,7 +127,7 @@
 
 
 <div class="description">
-    <p>Main logical driver</p>
+    <p>SinglyLinkedNode Class container for SinglyLinkedListNodeClass</p>
 </div>
 
 
@@ -166,7 +140,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>driver();</code></pre>
+    <pre class="prettyprint"><code>const myNode = new SinglyLinkedNode(10);</code></pre>
 
 
 
@@ -184,6 +158,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -196,12 +172,15 @@
 
         <tr>
             
-                <td class="name"><code>void</code></td>
+                <td class="name"><code>mixed|void</code></td>
             
 
             <td class="type">
             
                 
+<span class="param-type">nodeData</span>
+|
+
 <span class="param-type">void</span>
 
 
@@ -209,10 +188,20 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>No parameters are accepted by this function.</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -235,10 +224,10 @@
 
 
 <h5>Returns:</h5>
-<ul>
-        <li>
+
+        
 <div class="param-desc">
-    <p>Nothing is returned from this function.</p>
+    <p>void</p>
 </div>
 
 
@@ -254,9 +243,157 @@
 
     </dd>
 </dl>
-</li>
+
     
-        <li>
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-cs_singly-linked-list-utils.html">cs/singly-linked-list-utils</a>~</span>
+        
+        SinglyLinkedListClass
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+
+    <h4 class="name" id="SinglyLinkedListClass"><span class="type-signature"></span>new SinglyLinkedListClass<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_singly-linked-list-utils.js.html">modules/singly-linked-list-utils.js</a>, <a href="modules_singly-linked-list-utils.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>SinglyLinkedList - Class container for a List of SinglyLinkedNodes</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const myHead = new SinglyLinkedListNodeClass(15)
+const myList = new SinglyLinkedListClass();</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>void</p>
+</div>
+
 
 
 <dl class="param-type">
@@ -270,12 +407,29 @@
 
     </dd>
 </dl>
-</li>
-    </ul>
+
+    
 
 
 
         
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
     
 
     

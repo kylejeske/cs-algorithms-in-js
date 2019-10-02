@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>my/entrypoint - JS Algorithm Modules</title>
+    <title>modules/reverse-signed-int32.js - JS Algorithm Modules</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -46,244 +46,61 @@
 
 <div id="main">
     
-    <h1 class="page-title">my/entrypoint</h1>
+    <h1 class="page-title">modules/reverse-signed-int32.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li><a href="module-cs_kadanes-maxsum-subarray.html">module:cs/kadanes-maxsum-subarray</a></li>
-        </ul>
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~driver"><span class="type-signature">(inner) </span>driver<span class="signature">(void)</span><span class="type-signature"> &rarr; {void|void}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>Main logical driver</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>driver();</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>void</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">void</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>No parameters are accepted by this function.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-<ul>
-        <li>
-<div class="param-desc">
-    <p>Nothing is returned from this function.</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">void</span>
-
-
-    </dd>
-</dl>
-</li>
-    
-        <li>
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">void</span>
-
-
-    </dd>
-</dl>
-</li>
-    </ul>
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * Reverse the digits in a Signed 32-bit Integer
+ * @fileOverview Reverse the digits in a Signed 32-bit Integer
+ * @example
+ * import { reverseSignedInt32 } from './reverse-signed-int32.js';
+ *
+ * let int = 123456;
+ * let res = reverseSignedInt32(int); // Result: res = 654321;
+ *
+ *
+ * @module cs/reverse-signed-int32
+ * @exports reverseSignedInt32
+ */
+
+/**
+ * @const MIN_INT32
+ */
+const MIN_INT32 = 1&lt;&lt;31;      // -2147483648
+/**
+ * @const MAX_INT32
+ */
+const MAX_INT32 = 1&lt;&lt;31>>>0;  //  2147483648
+
+ /**
+  * Reverse a Signed Integer 32
+  * @function
+  * @param {integer} [int] - Integer that we are reversing.
+  * @returns {integer|0} result
+  */
+const reverseSignedInt32 = (int) => {
+  let result = 0;
+  while (int !== 0) {
+    result = result * 10 + (int % 10);
+    int = Math.trunc(int / 10);
+  }
+  return (result > MAX_INT32 || result &lt; MIN_INT32)
+          ? 0
+          : result;
+}
+
+export { reverseSignedInt32 }
+</code></pre>
+        </article>
+    </section>
 
 
 

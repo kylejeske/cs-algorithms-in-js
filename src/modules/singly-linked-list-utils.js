@@ -1,7 +1,7 @@
 /**
  * Utility Class for Building Singly-Linked-Lists
  * @fileOverview A Utility class for building and formatting within a LinkedList in JavaScript.
- * @example
+ * @example 
  *
  * import { SinglyLinkedList, SinglyLinkedNode, Utils, ParseIntoHumanFormat } from './singly-linked-list-utils';
  * const toHumanReadableList = async (mockSLL) => {
@@ -28,8 +28,9 @@ const SinglyLinkedNode = class SinglyLinkedNodeClass {
     /**
      * @constructor
      * @param {nodeData} - Various data to assign to the Node Element
-     * @assign {this.data} - Data relative to this element
-     * @assign {this.next} [=null] - Next element in linked list
+     * @typedef {Object} SinglyLinkedNodeClass
+     * @property {Object} data - Data relative to this element
+     * @property {Object} next [=null] - Next element in linked list
      */
     constructor(nodeData) {
         this.data = nodeData;
@@ -60,7 +61,6 @@ const SinglyLinkedList = class SinglyLinkedListClass {
 /**
  * wsLog
  * @function wsLog
- * @returns { annonymous function ( console.table ) }
  * @ignore
  */
 const wsLog = (() => console.table)();
@@ -68,10 +68,10 @@ const wsLog = (() => console.table)();
 /**
  * sizeOf - Checks for existance, and isArray, then returns the length of array
  * @function sizeOf
- * @belongs Utils
+ * @member {Object} Utils
  * @example
  *  sizeOf([1,2,3,4]) => 4
- * @param {mixed[]=} - List
+ * @param {mixed[]} [=list] - List
  * @returns {interger}
  */
 const sizeOf = list => (list == null || Array.isArray(list) == false)
@@ -81,6 +81,7 @@ const sizeOf = list => (list == null || Array.isArray(list) == false)
 /**
  * first
  * @function first
+ * @member {Object} Utils
  */
 const first  = list => (list == null || list.length < 1)
                             ? void 0
@@ -88,6 +89,7 @@ const first  = list => (list == null || list.length < 1)
 /**
  * last
  * @function last
+ * @member {Object} Utils
  */
 const last = list => (list == null || list.length < 1)
                             ? void 0
@@ -95,14 +97,15 @@ const last = list => (list == null || list.length < 1)
 /**
  * all
  * @function last
+ * @member {Object} Utils
  */
 const all = list => (list == null)
                             ? void 0
                             : list;
 /**
  * Utils - Combined object of useful methods.
- * @object Utils
- * @returns {Function[]}
+ * @typedef {Object} Utils
+ * @returns {Function}
  */
 const Utils = { sizeOf, first, last, all };
 
@@ -110,7 +113,7 @@ const Utils = { sizeOf, first, last, all };
  * parseIntoHumanFormat - loop over a list of linked nodes, and format it into an array
  * @function annonymous
  * @param {node} Node
- * @return {Object[Function]}
+ * @returns {Object} ParseIntoHumanFormat
  */
 const ParseIntoHumanFormat = function(node) {
     let pretty = [];
@@ -118,10 +121,11 @@ const ParseIntoHumanFormat = function(node) {
       pretty.push(node);
       node = node.next;
     };
+    /** @typedef {Object} **/
     return {
       /**
        * number of nodes in list
-       * @function size
+       * @member {Function}
        */
       size:   _ => Utils.sizeOf(pretty),
 
@@ -140,7 +144,7 @@ const ParseIntoHumanFormat = function(node) {
       /**
        * produce an array indexed by position within the linked list
        * @function flat
-       * @return {Array[SinglyLinkedNode]}
+       * @returns {Array} [SinglyLinkedNode]
        */
       flat:   _ => Utils.all(pretty)
     };

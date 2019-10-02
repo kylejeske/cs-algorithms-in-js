@@ -18,7 +18,7 @@
     "docs:generate-website": "node_modules/.bin/jsdoc -c jsdoc.json",
     "docs:gen-modules": "node_modules/.bin/jsdoc2md --template ./src/template.hbs --files ./src/modules/*.js > ./src/modules.md",
     "docs:gen-module-json": "node_modules/.bin/jsdoc2md --files ./src/modules/*.js --template ./src/template.hbs --json > ./src/.modules-jsdoc.json",
-    "docs:generate": "yarn docs:generate-website && yarn docs:gen-modules",
+    "docs": "yarn run docs:generate-website && yarn run docs:gen-modules",
     "dev": "node --experimental-modules --verbose ./src/index.js",
     "tdd": "node --experimental-modules --no-warnings ./node_modules/.bin/jest --verbose ./__tests__/*.test.js --watch",
     "dev:watch": "node --experimental-modules --no-warnings ./node_modules/.bin/jest --verbose ./__tests__/*.test.js --watch",
