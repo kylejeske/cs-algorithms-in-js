@@ -1,12 +1,4 @@
-//import { fileURLToPath } from 'url';
-//import { dirname } from 'path';
-//import 'data:text/javascript,console.log("hello!");';
-
 import moduleLoader from './modules/loader';
-
-//import { createRequire } from 'module';
-//const require = createRequire(import.meta.url);
-console.table(moduleLoader);
 
 /**
  * Entrypoint into the logic of the modules.
@@ -16,7 +8,6 @@ console.table(moduleLoader);
 
 /**
  * @module my/entrypoint
- * @requires cs/kadanes-maxsum-subarray
  * @exports {void} Nothing is exported.
  * @returns {void} Nothing is returned.
  */
@@ -36,7 +27,6 @@ const driver = () => {
     let actualResult = maxSubArraySum(arr);
     console.assert(actualResult === expectedResult, `The maximum contiguous array sum should be '${expectedResult}'. The actual result was:`, actualResult);
     console.log(`Executing maxSubArraySum(${arr.toString()}) -> Result: Max Sum = ${actualResult}`);
-    debugger;
 }
 
 driver();
