@@ -3,6 +3,10 @@
 ### Documentation available at:
 [https://kylejeske.github.io/cs-algorithms-in-js/](https://kylejeske.github.io/cs-algorithms-in-js/)
 
+### Full List of 'Modules' with Internal Documentation
+See full list of modules:
+[link: src/modules.md](src/modules.md)
+
 ---
 
 ## Example
