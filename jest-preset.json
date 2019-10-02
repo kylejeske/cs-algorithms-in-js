@@ -7,14 +7,6 @@
   "projects":[
     {
       "displayName": "Unit-Tests"
-    },
-    {
-      "runner": "jest-runner-eslint",
-      "displayName": "lint",
-      "testMatch": [
-                    "<rootDir>/src/**/*.js",
-                    "<rootDir>/__tests__/**/*.js"
-                  ]
     }
   ],
   "reporters": [
