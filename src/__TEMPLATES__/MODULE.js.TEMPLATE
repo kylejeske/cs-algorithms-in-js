@@ -1,0 +1,22 @@
+/**
+ * %MODULE_PURPOSE%
+ * @module %MODULE_NAME%
+ * @fileOverview %MODULE_DESC%
+ * @exports %MODULE_EXPORTS%
+ * @example
+ * %MODULE_RT_EXAMPLE%
+ *
+ */
+
+ /**
+  * %FUNCTION_DESC%
+  * @function
+  * @param {%PARAM[0]_PRIMATIVE_TYPE%} [%PARAM[0]_DEFAULT%] - %PARAM[0]_DESC%
+  * @returns {%FUNCTION_RETURN_PRIM_TYPE%} %FUNCTION_RETURN%
+  */
+const %FUNCTION_NAME% = function __%FUNCTION_NAME%(%FUNCTION_PARAMS%) {
+    %FUNCTION_LOGIC%
+    return %FUNCTION_RETURN%;
+}
+
+export %FUNCTION_NAME%

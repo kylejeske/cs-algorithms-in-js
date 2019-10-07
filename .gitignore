@@ -63,3 +63,5 @@ typings/
 # unimportant-stuff
 .crt
 .DS_Store
+*.sublime-project
+*.sublime-workspace

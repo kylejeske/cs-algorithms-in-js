@@ -1,0 +1,8 @@
+/* eslint no-use-before-define: 0 */
+import { %MODULE_IMPORT_FUNCTION% } from '%MODULE_FILENAME%';
+
+describe('%MODULE_PURPOSE%', () => {
+  it('should have a function to use', () => {
+    expect(typeof %MODULE_IMPORT_FUNCTION%).toEqual("function");
+  });
+});
